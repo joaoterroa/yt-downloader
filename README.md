@@ -31,10 +31,10 @@ Before running the application, ensure you have Python installed on your system.
 2. Run the application using Python by executing the following command in your terminal or command prompt:
 
    ```
-   python youtube_downloader.py
+   python yt-downloader.py
    ```
 
-   Replace `youtube_downloader.py` with the path to the application script if you're in a different directory.
+   Replace `yt-downloader.py` with the path to the application script if you're in a different directory.
 
 3. The application window will open. Enter the YouTube URL you wish to download, select the desired format (MP4 or MP3), and click "Download".
 
