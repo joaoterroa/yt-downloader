@@ -58,7 +58,7 @@ def download_video(url, download_folder):
         filename_result = subprocess.run(
             shlex.split(get_filename_command), stdout=subprocess.PIPE, check=True
         )
-        filename = filename_result.stdout.strip().decode("utf-8")
+        filename = filename_result.stdout.strip().decode("utf-8", errors="replace")
 
         download_command = f'yt-dlp -o "{filename}" --merge-output-format mp4 {url}'
         subprocess.run(shlex.split(download_command), check=True)
@@ -78,7 +78,7 @@ def download_audio(url, download_folder):
         filename_result = subprocess.run(
             shlex.split(get_filename_command), stdout=subprocess.PIPE, check=True
         )
-        filename = filename_result.stdout.strip().decode("utf-8")
+        filename = filename_result.stdout.strip().decode("utf-8", errors="replace")
 
         title = filename.split("/")[-1].rsplit(".", 1)[0]
 
